@@ -1,0 +1,39 @@
+.pm-admin-block {
+	display: block;
+}
+.pm-admin-block:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+.pm-admin-left-block {
+	width: 40%;
+	min-width: 200px;
+	float: left;
+}
+.pm-admin-right-block {
+	width: 55%;
+	min-width: 250px;
+	float: right;
+}
+#pm_marker_icon_preview {
+	position: relative;
+	height: 28px;
+	line-height: 28px;
+}
+#pm_marker_icon_preview img {
+	position: absolute;
+	top: -4px;
+	left: 0;
+	height: 28px;
+	line-height: 28px;
+}
+
+@media (max-width: 640px) {
+	.pm-admin-left-block,
+	.pm-admin-right-block {
+		float: none;
+		clear: both;
+		width: 100%;
+	}
+}
