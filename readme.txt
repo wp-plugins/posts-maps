@@ -64,11 +64,13 @@ To show the map you need to add shortcode [pm-show-map] to the content
 It displays a map for the current post.
 
 
+
 `[pm-show-map-by-post-types]`
 It displays a map with all points of a posts for a given post types.
 
 For example, `[pm-show-map-by-post-types store market]`
 It displays a map for the post types "store" and "market".
+
 
 
 `[pm-show-map-by-post-id]`
