@@ -32,7 +32,7 @@ Your map is ready.
 
 == Installation ==
 
-=Installation and configuration:=
+= Installation and configuration: =
 
 1. Install the plugin.
 
@@ -44,7 +44,7 @@ Your map is ready.
 
 
 
-=To show the map:=
+= To show the map: =
 
 1. Add new/edit post
 
@@ -58,7 +58,7 @@ To show the map you need to add shortcode [pm-show-map] to the content
 
 
 
-=Shortcodes:=
+= Shortcodes: =
 
 `[pm-show-map]`
 It displays a map for the current post.
@@ -73,44 +73,50 @@ It displays a map for the post types "store" and "market".
 
 `[pm-show-map-by-post-id]`
 It displays a map of a posts for a given post_id
+
 For example, 
 `[pm-show-map-by-post-id 135 148 1120]`
 It displays a map with points of posts 135, 148 and 1120.
 
 
 
-=Template tags:=
+= Template tags: =
 
 
 `showPostMap(post_ID)`
 It displays a map for a given post_id
 
 Parameters
-`post_ID (integer)(required)` - post ID
+`post_ID (integer)(required)`
 
 
-`showPostsMapByPostTypes`
+
+`showPostsMapByPostTypes(post_types)`
 It displays a map of a posts for a given post types.
 
 Parameters
-`post_types(integer/array)(required)` - post types
+`post_types(integer/array)(required)`
 
 For example, 
 `showPostsMapByPostTypes(array('store','market'))`
 displays a map for the post types "store" and "market".
 
 
-`showPostsMapByPostId`
+
+`showPostsMapByPostId(posts_ID)`
 It displays a map with points of a posts for a given posts ID
-`posts_ID(integer/array)(required)` - posts ID
+`posts_ID(integer/array)(required)`
 
 
 
-=For Developers=
+= For Developers =
 
 If you do not want to use the default plugin templates, tou can to create your template:
 
-Create a folder "pmViews" in active theme.
+Create a folder:
+
+`pmViews`
+in active theme.
 
 
 Add template:
