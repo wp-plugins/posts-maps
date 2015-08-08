@@ -32,7 +32,7 @@ Your map is ready.
 
 == Installation ==
 
-Installation and configuration:
+=Installation and configuration:=
 
 1. Install the plugin.
 
@@ -42,11 +42,9 @@ Installation and configuration:
 
 4. Specify the size of the map (if you left field empty, then the height and width of the block will be equal to 100%).
 
-`/assets/screenshot-1.png`
 
 
-
-To show the map:
+=To show the map:=
 
 1. Add new/edit post
 
@@ -54,54 +52,61 @@ To show the map:
 
 3. Select a marker and save
 
-`/assets/screenshot-2.png`
 
 To show the map you need to add shortcode [pm-show-map] to the content 
 
-`/assets/screenshot-3.png`
 
 
 
-Shortcodes:
+=Shortcodes:=
 
-[pm-show-map] - It displays a map for the current post.
-
-
-[pm-show-map-by-post-types] - It displays a map with all points of a posts for a given post types. 
-For example, [pm-show-map-by-post-types store market] - It displays a map for the post types "store" and "market".
+`[pm-show-map]`
+It displays a map for the current post.
 
 
-[pm-show-map-by-post-id] - It displays a map of a posts for a given post_id
-For example, [pm-show-map-by-post-id 135 148 1120] It displays a map with points of posts 135, 148 and 1120.
+`[pm-show-map-by-post-types]`
+It displays a map with all points of a posts for a given post types.
+
+For example, `[pm-show-map-by-post-types store market]`
+It displays a map for the post types "store" and "market".
+
+
+`[pm-show-map-by-post-id]`
+It displays a map of a posts for a given post_id
+For example, 
+`[pm-show-map-by-post-id 135 148 1120]`
+It displays a map with points of posts 135, 148 and 1120.
 
 
 
-Template tags:
+=Template tags:=
 
 
-showPostMap - It displays a map for a given post_id
+`showPostMap(post_ID)`
+It displays a map for a given post_id
 
 Parameters
+`post_ID (integer)(required)` - post ID
 
-`$post_ID (integer)(required)` - post ID
 
-
-showPostsMapByPostTypes - It displays a map of a posts for a given post types.
+`showPostsMapByPostTypes`
+It displays a map of a posts for a given post types.
 
 Parameters
+`post_types(integer/array)(required)` - post types
 
-$post_types(integer/array)(required) - post types
-
-For example, showPostsMapByPostTypes(array('store','market')) displays a map for the post types "store" and "market".
-
-
-showPostsMapByPostId - It displays a map with points of a posts for a given posts ID
-
-$posts_ID(integer/array)(required) - posts ID
+For example, 
+`showPostsMapByPostTypes(array('store','market'))`
+displays a map for the post types "store" and "market".
 
 
+`showPostsMapByPostId`
+It displays a map with points of a posts for a given posts ID
+`posts_ID(integer/array)(required)` - posts ID
 
-For Developers
+
+
+=For Developers=
 
 If you do not want to use the default plugin templates, tou can to create your template:
 
@@ -110,77 +115,79 @@ Create a folder "pmViews" in active theme.
 
 Add template:
 
-mapBlock.php - to display the map for one post via shortcode [pm-show-map] or template tag showPostMap(post ID)
+`mapBlock.php`
+to display the map for one post via shortcode [pm-show-map] or template tag showPostMap(post ID)
 
-mapBlockMultiple.php - to display the map with a list of points using the shortcode [pm-show-map-by-post-types] or [pm-show-map-by-post-id] or by using the template tag showPostsMapByPostTypes(post types) or showPostsMapByPostId(posts ID)
+`mapBlockMultiple.php`
+to display the map with a list of points using the shortcode [pm-show-map-by-post-types] or [pm-show-map-by-post-id] or by using the template tag showPostsMapByPostTypes(post types) or showPostsMapByPostId(posts ID)
 
 
 Template variables mapBlock.php:
 
-`$post` - the current post
+`$post - the current post
 
-`$lat` - latitude for a current post
+$lat - latitude for a current post
 
-`$lng` - longitude for a current post
+$lng - longitude for a current post
 
-`$postMarker` - marker for a current post
+$postMarker - marker for a current post
 
-`$mapMarkerIcons` - an associative array with the list of icons
+$mapMarkerIcons - an associative array with the list of icons
 
-`$mapHeight` - height of a map
+$mapHeight - height of a map
 
-`$mapWidth` - width of a map
+$mapWidth - width of a map`
 
 
 to create a map add this javascript to template:
 
-`var pmMap = {};`
+`var pmMap = {};
 
-`pmMap.lat = '<?php echo $lat;?>';`
+pmMap.lat = '<?php echo $lat;?>';
 
-`pmMap.lng = '<?php echo $lng;?>';`
+pmMap.lng = '<?php echo $lng;?>';
 
-`pmMap.title = '<?php echo $post->post_title;?>';`
+pmMap.title = '<?php echo $post->post_title;?>';
 
-`pmMap.img = '<?php echo $thumbUrl;?>';`
+pmMap.img = '<?php echo $thumbUrl;?>';
 
-`pmMap.markerIcon = '<?php echo plugins_url() . '/posts-maps/assets/images/' . $mapMarkerIcons[$postMarker];?>';`
+pmMap.markerIcon = '<?php echo plugins_url() . '/posts-maps/assets/images/' . $mapMarkerIcons[$postMarker];?>';
 
-`initialize(pmMap)`
+initialize(pmMap)`
 
 
 
 Template variables mapBlockMultiple.php:
 
-`$posts` - a list of selected posts
+`$posts - a list of selected posts`
 
 Each item contains:
 
-`$post_item->ID` - post ID
+`$post_item->ID - post ID
 
-`$post_item->title` - post title
+$post_item->title - post title
 
-`$post_item->url` - post url
+$post_item->url - post url
 
-`$post_item->thumbUrl` - thumbnail url for a post
+$post_item->thumbUrl - thumbnail url for a post
 
-`$post_item->lat` - latitude for a post
+$post_item->lat - latitude for a post
 
-`$post_item->lng` - Longitude for a post
+$post_item->lng - Longitude for a post
 
-`$post_item->postMarker` - post marker
+$post_item->postMarker - post marker
 
-`$post_item->postMarkerIcon` - url icon for a given marker post
+$post_item->postMarkerIcon - url icon for a given marker post`
 
 
 to create a map add this javascript to template:
 
-`var pmMapData = jQuery.parseJSON('<?php echo json_encode($posts);?>');`
+`var pmMapData = jQuery.parseJSON('<?php echo json_encode($posts);?>');
 
-`initializeMultiple(pmMapData);`
+initializeMultiple(pmMapData);`
 
 == Screenshots ==
 
-`/assets/screenshot-1.png`
-`/assets/screenshot-2.png`
-`/assets/screenshot-3.png`
+1. Settings
+2. Search place and click right button on map or marker
+3. Add shortcode
