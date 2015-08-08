@@ -84,8 +84,8 @@ It displays a map with points of posts 135, 148 and 1120.
 
 = Template tags: =
 
-
-`showPostMap(post_ID)`
+Display map for one post
+`<?php showPostMap($post_ID);?>`
 It displays a map for a given post_id
 
 Parameters
@@ -93,19 +93,21 @@ Parameters
 
 
 
-`showPostsMapByPostTypes(post_types)`
+Display map for list of post types
+`<?php showPostsMapByPostTypes($post_types);?>`
 It displays a map of a posts for a given post types.
 
 Parameters
 `post_types(integer/array)(required)`
 
 For example, 
-`showPostsMapByPostTypes(array('store','market'))`
+`<?php showPostsMapByPostTypes(array('store','market'));?>`
 displays a map for the post types "store" and "market".
 
 
 
-`showPostsMapByPostId(posts_ID)`
+Display map for list of post ID
+`<?php showPostsMapByPostId(posts_ID);?>`
 It displays a map with points of a posts for a given posts ID
 `posts_ID(integer/array)(required)`
 
