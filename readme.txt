@@ -201,3 +201,13 @@ initializeMultiple(pmMapData);`
 1. Settings
 2. Search place and click right button on map or marker
 3. Add shortcode
+
+== Changelog ==
+
+= 1.0.1 =
+* Queries optimization.
+
+== Upgrade Notice ==
+
+= 1.0.1 =
+Queries optimization for a few markers of the map

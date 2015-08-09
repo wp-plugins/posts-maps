@@ -39,8 +39,20 @@ class PostsMapsModel {
             $args = array(
                 'post_type' => $postTypes,
                 'post_status' => 'publish',
-                'posts_per_page' => -1
-            );        
+                'posts_per_page' => -1,
+                'meta_query' => array(
+                    array(
+                        'key' => 'pm_lat',
+                        'meta_value' => '',
+                        'compare' => '!='
+                        ),
+                    array(
+                        'key' => 'pm_lng',
+                        'meta_value' => '',
+                        'compare' => '!='
+                        ),
+                    ),
+            );
             $query = new WP_Query($args);
             return $this->getPostsWithMapDataByQuery($query);
         }
@@ -55,8 +67,20 @@ class PostsMapsModel {
             $args = array(
                 'post__in' => $postId,
                 'post_status' => 'publish',
-                'posts_per_page' => -1
-            );        
+                'posts_per_page' => -1,
+                'meta_query' => array(
+                    array(
+                        'key' => 'pm_lat',
+                        'meta_value' => '',
+                        'compare' => '!='
+                        ),
+                    array(
+                        'key' => 'pm_lng',
+                        'meta_value' => '',
+                        'compare' => '!='
+                        ),
+                    ),
+            );
             $query = new WP_Query($args);
             return $this->getPostsWithMapDataByQuery($query);
         }

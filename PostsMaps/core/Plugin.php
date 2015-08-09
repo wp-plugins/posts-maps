@@ -35,6 +35,8 @@ class PostsMapsCorePlugin extends CorePlugin {
             'desert' => 'des.png',
             'circle' => 'cir.png',
             'lighthouse' => 'lig.png',
+            'resort' => 'res.png',
+            'city' => 'cit.png',
             );
         update_option('pm_marker_icons', serialize($markerIcons));
     }
