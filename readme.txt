@@ -204,10 +204,16 @@ initializeMultiple(pmMapData);`
 
 == Changelog ==
 
+= 1.0.2 =
+* Bugs of getting marker of posts by id and center of the map was fixed.
+
 = 1.0.1 =
 * Queries optimization.
 
 == Upgrade Notice ==
+
+= 1.0.2 =
+Bugs of getting marker of posts by id and center of the map was fixed
 
 = 1.0.1 =
 Queries optimization for a few markers of the map

@@ -28,6 +28,7 @@ function initialize(pmMap) {
 
 function initializeMultiple(pmMap) {
 	var Settings = getMapSettings(pmMap);
+	console.log(Settings);
 	if(!Settings) {
 		Settings = {};
 		Settings.zoom = 12;
@@ -97,6 +98,8 @@ function getMapSettings(pmMap) {
 			angle += 360;
 		}
 		settings.zoom = Math.round(Math.log(parseInt(jQuery('#pm-map').width()) * 360 / angle / GLOBE_WIDTH) / Math.LN2) - 2;
+		if(settings.zoom == 'Infinity')
+			settings.zoom = 8;
 		return settings;
 	}
 	return;

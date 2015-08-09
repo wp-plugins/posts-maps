@@ -65,6 +65,7 @@ class PostsMapsModel {
             $postId = array($postId);
         if(isCorrectArray($postId)) {
             $args = array(
+                'post_type' => 'any',
                 'post__in' => $postId,
                 'post_status' => 'publish',
                 'posts_per_page' => -1,
