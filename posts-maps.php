@@ -6,7 +6,7 @@
 Plugin Name: Posts Maps
 Description: Posts maps
 Author: Dmitrij Mashkin
-Version: 1.0
+Version: 1.0.1
 Author URI: http://mashkin.pro/
 */
 
