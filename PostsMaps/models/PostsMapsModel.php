@@ -43,13 +43,11 @@ class PostsMapsModel {
                 'meta_query' => array(
                     array(
                         'key' => 'pm_lat',
-                        'meta_value' => '',
-                        'compare' => '!='
+                        'compare' => 'EXISTS'
                         ),
                     array(
                         'key' => 'pm_lng',
-                        'meta_value' => '',
-                        'compare' => '!='
+                        'compare' => 'EXISTS'
                         ),
                     ),
             );
@@ -72,13 +70,11 @@ class PostsMapsModel {
                 'meta_query' => array(
                     array(
                         'key' => 'pm_lat',
-                        'meta_value' => '',
-                        'compare' => '!='
+                        'compare' => 'EXISTS'
                         ),
                     array(
                         'key' => 'pm_lng',
-                        'meta_value' => '',
-                        'compare' => '!='
+                        'compare' => 'EXISTS'
                         ),
                     ),
             );

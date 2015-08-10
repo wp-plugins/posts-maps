@@ -164,9 +164,10 @@ class PostsMapsCorePlugin extends CorePlugin {
         if(isset($_POST['pm_fields']) && isCorrectArray($_POST['pm_fields'])) {
             $_POST['pm_fields'] = array_map('trim', $_POST['pm_fields']);
             foreach($_POST['pm_fields'] as $key => $value){
-                if(empty($value))
+                if(!trim($value))
                     delete_post_meta($postId, $key);
-                update_post_meta($postId, $key, $value);
+                else
+                    update_post_meta($postId, $key, $value);
             }
         }
     }

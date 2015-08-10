@@ -1,12 +1,12 @@
 <?php
 /**
- * @version 1.0.2
+ * @version 1.0.3
  */
 /*
 Plugin Name: Posts Maps
 Description: Posts maps
 Author: Dmitrij Mashkin
-Version: 1.0.2
+Version: 1.0.3
 Author URI: http://mashkin.pro/
 */
 

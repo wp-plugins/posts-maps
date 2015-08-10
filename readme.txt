@@ -204,6 +204,10 @@ initializeMultiple(pmMapData);`
 
 == Changelog ==
 
+= 1.0.3 =
+* Bug of saving coordinates was fixed.
+* Queries optimization.
+
 = 1.0.2 =
 * Bugs of getting marker of posts by id and center of the map was fixed.
 
@@ -211,6 +215,9 @@ initializeMultiple(pmMapData);`
 * Queries optimization.
 
 == Upgrade Notice ==
+
+= 1.0.3 =
+Bugs of saving coordinates was fixed
 
 = 1.0.2 =
 Bugs of getting marker of posts by id and center of the map was fixed
